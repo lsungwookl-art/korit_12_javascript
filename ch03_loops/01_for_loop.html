@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let productList = [
+  {
+    name: '솔의눈',
+    price: 700,
+  },
+  {
+    name: '커피',
+    price: 700,
+  },
+  {
+    name: '파워에이드',
+    price: 1200,
+  },
+  {
+    name: '오렌지주스',
+    price: 1000,
+  },
+  {
+    name: '보리차',
+    price: 1200,
+  },
+  {
+    name: '콜라',
+    price: 800,
+  },  
+]
+
+// 음료의 이름들만 뽑아내보시오.
+/*
+실행 예
+솔의눈
+커피
+파워에이드
+오렌지주스
+보리차
+콜라
+*/
+for ( let i = 0 ; i < productList.length ; i++ ) {
+  console.log(productList[i].name);
+  console.log(productList[i]['name']);
+}
+  </script>
+</body>
+</html>

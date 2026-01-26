@@ -1,0 +1,142 @@
+:root {
+    --primary-pink: #ffafcc;
+    --secondary-pink: #ffc8dd;
+    --accent-purple: #cdb4db;
+    --text-color: #5c5c5c;
+    --white: #ffffff;
+}
+
+body {
+    background-color: #f0eff4;
+    background-image: radial-gradient(#ffc8dd 1px, transparent 1px);
+    background-size: 20px 20px; /* 도트 배경으로 하이틴 감성 추가 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+}
+
+.planner {
+    background: var(--white);
+    width: 350px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(255, 175, 204, 0.4);
+    padding: 30px;
+    border: 4px solid var(--secondary-pink);
+}
+
+.planner__title {
+    color: var(--primary-pink);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px var(--secondary-pink);
+}
+
+.todo-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-input-group__input {
+    flex: 1;
+    border: 2px solid var(--accent-purple);
+    border-radius: 15px;
+    padding: 10px 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.todo-input-group__input:focus {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 10px rgba(255, 175, 204, 0.2);
+}
+
+.todo-input-group__button {
+    background: var(--primary-pink);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 0 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.todo-input-group__button:hover {
+    transform: scale(1.05);
+    background: var(--secondary-pink);
+}
+
+/* 리스트 스타일링 */
+.todo-container {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    background: #fff9fb;
+    border-radius: 15px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--secondary-pink);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.todo-item__checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-pink);
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 12px;
+    position: relative;
+}
+
+.todo-item__checkbox:checked {
+    background: var(--primary-pink);
+}
+
+.todo-item__checkbox:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 0px;
+}
+
+.todo-item__text {
+    flex: 1;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.todo-item--completed .todo-item__text {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.todo-item__delete {
+    background: transparent;
+    border: none;
+    color: var(--accent-purple);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.todo-item__delete:hover {
+    color: var(--primary-pink);
+}
