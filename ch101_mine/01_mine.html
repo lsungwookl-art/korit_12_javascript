@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 지뢰찾기</title>
+    <link rel="stylesheet" href="01_mine.css">
+</head>
+<body>
+    <h1>지뢰찾기</h1>
+    <div class="game-container">
+        <div class="control-panel">
+            <select id="difficulty-select">
+                <option value="easy">초급 (10x10, 지뢰 10)</option>
+                <option value="medium">중급 (15x15, 지뢰 30)</option>
+                <option value="hard">고급 (20x20, 지뢰 60)</option>
+            </select>
+            <button id="reset-button">새 게임</button>
+        </div>
+        
+        <div class="stats-bar">
+            <span id="mines-left">지뢰: 10</span>
+            <span id="timer">시간: 0s</span>
+            <span id="best-time">최고 기록: -</span>
+        </div>
+
+        <div id="game-board" class="game-board"></div>
+        <div id="game-status" class="game-status"></div>
+    </div>
+    <script src="01_mine.js"></script>
+</body>
+</html>

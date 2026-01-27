@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 장보기 리스트</title>
+    <link rel="stylesheet" href="01_shoppinglist.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 장보기 목록</h1>
+        
+        <div class="input-form">
+            <input type="text" id="itemName" placeholder="품목 입력 (예: 우유)">
+            <input type="number" id="itemPrice" placeholder="가격 (원)">
+            <button id="addBtn">추가</button>
+        </div>
+
+        <ul id="shoppingList">
+            </ul>
+
+        <div class="total-section">
+            <span class="total-label">총 결제 예정 금액:</span>
+            <span class="total-amount"><span id="totalPrice">0</span>원</span>
+        </div>
+    </div>
+    <script src="01_shoppinglist.js"></script>
+</body>
+</html>

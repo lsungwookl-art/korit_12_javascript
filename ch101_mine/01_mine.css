@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.control-panel, .stats-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.stats-bar {
+    font-weight: bold;
+    color: #495057;
+    background: #e9ecef;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.game-board {
+    display: grid;
+    background-color: #adb5bd;
+    border: 4px solid #dee2e6;
+    gap: 1px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 32px;
+    height: 32px;
+    background-color: #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.1rem;
+}
+
+.cell.revealed {
+    background-color: #f8f9fa;
+    animation: reveal-anim 0.2s ease-out;
+}
+
+@keyframes reveal-anim {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.cell.mine { background-color: #ff6b6b; }
+.cell.flagged { background-color: #ffd43b; animation: flag-anim 0.2s; }
+
+@keyframes flag-anim {
+    0% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.game-status {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 20px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.win { color: #51cf66; }
+.lose { color: #fa5252; }
+
+/* 숫자별 선명한 색상 */
+.num-1 { color: #1c7ed6; } .num-2 { color: #37b24d; }
+.num-3 { color: #f03e3e; } .num-4 { color: #7048e8; }
+.num-5 { color: #c2255c; } .num-6 { color: #1098ad; }

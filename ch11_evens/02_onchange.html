@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body bgcolor="5f5f5f">
+  <select id="selsct1" onchange="doChange();">
+    <option value="KO">한국</option>
+    <option value="CN">중국</option>
+    <option value="JP">일본</option>
+  </select>
+  <script>
+    function doChange() {
+      let selectedValue = document.getElementById('select1').value;
+      console.log(selectedValue);
+    }
+  </script>
+</body>
+</html>

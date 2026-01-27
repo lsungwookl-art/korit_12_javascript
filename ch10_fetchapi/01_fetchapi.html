@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fetch API</title>
+</head>
+<body bgcolor="5f5f5f">
+  <h1>01_fetchapi.html</h1>
+  <script>
+    // 형식에 주목해두겠습니다.
+    // Get / Read : 읽어오기 / id가 1인 데이터 조회
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+    .then(response => response.json())
+    .then((json) => console.log(json));
+
+    // Post / Create : 데이터 생성
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: "POST",   // http request 요청 방법
+      body: JSON.stringify({
+        title: '왜 다들 눈이 반만 떠져있나요',
+        body: '잠이 오시나요',
+        userId: 1,
+      }),
+      headers: {
+        "content-type": "application/json; charset=UTF-8",
+      },
+    })
+    .then(response => response.json())
+    .then(json => console.log(json));
+
+    // Put / Update : 데이터 수정
+    fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      method: 'PUT',
+      body: JSON.stringify({
+        id: 1,
+        title: '이거 다음에는 Promise 타입 학습',
+        body: '그거 하면 아마도 자습 시간 일 것 같습니다',
+        userId: 1,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+    .then(response => response.json())
+    .then(json => console.log(json));
+
+    // Delete - 데이터 삭제
+    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+      method: "DELETE",
+    });
+    // 근데 삭제 됐는지 확인할 수가 없기 때문에 Read를 새로 해야 합니다. 
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then((json) => console.log(json));
+    // 그러니까 삭제 후에는 todolist 기준으로 renderTodo를 새로 해야겠네요.
+    // C / U / D 뒤에는 -> 새로 R을 해야한다고 알고 있겠습니다.
+  </script>
+</body>
+</html>
