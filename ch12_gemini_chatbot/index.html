@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Chatbot</title>
+  <link rel="stylesheet" href="./chatbot.css">
+</head>
+<body bgcolor="5f5f5f">
+
+  <!-- 전체 HTML 구조 시작 부분 -->
+  <div class="chat-container">
+    <header>
+      Aemini Chatbot 👍
+    </header>
+
+    <!-- 채팅 내역이 쌓일 부분 설정 -->
+    <div id="chat-history">
+      <div class="message bot-message">
+        주인님 ! 무엇을 도와드릴까요 ?
+      </div>
+    </div>
+  
+    <!-- 로딩 표시 (숨김 상태) -->
+    <div class="loading" id="loading">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+  <!-- 입력 창 -->
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="메세지를 입력하세요 ... ">
+      <button id="send-btn">전송</button>
+    </div>
+
+  <!-- API 키 입력 모달 (처음에만 뜨게끔 작성할 예정) -->
+    <div id="api-key-modal">
+      <div class="modal-content">
+        <h3>Gemini APi Key</h3>
+        <p>Google AI Studio에서 발급받은 키를 입력하세요.</p>
+        <input type="password" id="api-key-input" placeholder="API Key 붙여넣기">
+        <button id="save-key-btn">시작하기</button>
+      </div>
+    </div>
+  </div>
+  <script src="./chatbot.js"></script>
+</body>
+</html>
