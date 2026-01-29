@@ -34,6 +34,7 @@ body {
 .header {
     text-align: center;
     margin-bottom: 45px;
+    
 }
 
 .main-logo {
@@ -59,14 +60,14 @@ body {
 }
 
 .tab-menu a:hover {
-    color: #111111;
+    color: blue;
     cursor: pointer;
 }
 
 .tab-menu a.active {
     color: #111111;
     font-weight: bold;
-    border-bottom: 3px solid #111111;
+    border-bottom: 1px solid #111111;
     margin-bottom: -1px;
 }
 .guide-text {
@@ -75,6 +76,7 @@ body {
     margin-bottom: 25px;
     text-align: center;
     word-break: keep-all;
+    box-shadow: #333333;
 }
 
 .input-group {
@@ -146,8 +148,13 @@ body {
 
 .btn-more {
     font-size: 12px;
+    font-weight: bold;
+    box-shadow: none;
     color: #999;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .guide-list {
