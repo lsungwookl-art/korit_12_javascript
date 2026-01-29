@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넥슨 일회용 로그인 구현</title>
+    <link rel="stylesheet" href="../ui_test/resource/font/style/common.css">
+</head>
+<body>
+    <div class="top-banner">
+        넥슨 ID/비밀번호 기록이 남지 않는 일회용 로그인!
+    </div>
+
+    <div class="login-wrapper">
+        <header class="header">
+            <h1 class="logo-area">
+                <a href="#">
+                    <img src="../ch00_10000hours/img/logo_nexon.png" alt="NEXON" class="main-logo">
+                </a>
+            </h1>
+        </header>
+
+        <nav class="tab-menu">
+            <a href="#">넥슨ID 로그인</a>
+            <a href="#" class="active">일회용 로그인</a>
+            <a href="#">QR 로그인</a>
+        </nav>
+
+        <main class="login-content">
+            <p class="guide-text">넥슨플레이 > 넥슨인증기 > 일회용 로그인에서 8자리 숫자를 입력해주세요.</p>
+            
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <input type="text" maxlength="4" placeholder="4자리" title="일회용 번호 앞 4자리" required>
+                    <input type="text" maxlength="4" placeholder="4자리" title="일회용 번호 뒤 4자리" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">일회용 로그인</button>
+            </form>
+
+            <section class="info-guide">
+                <div class="guide-header">
+                    <span class="title">일회용 로그인 이용 가이드</span>
+                    <a href="#" class="btn-more">넥슨플레이 안내 &gt;</a>
+                </div>
+                <ul class="guide-list">
+                    <li>1. 넥슨플레이 앱을 실행시켜주세요.</li>
+                    <li>2. 메뉴 탭에서 [넥슨인증기] 메뉴를 클릭, [일회용 로그인] 버튼을 클릭해주세요.</li>
+                    <li>3. 8자리 번호를 입력하고 로그인 버튼을 클릭해주세요.</li>
+                </ul>
+                <footer class="footer"><p class="copyright">© NEXON Korea Corporation All Rights Reserved.</p>
+                </footer>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

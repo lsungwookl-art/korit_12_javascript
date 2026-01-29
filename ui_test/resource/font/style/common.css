@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'NexonFont';
+    src: url('../font/nexon_font.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'NexonFont', 'Malgun Gothic', sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    -webkit-font-smoothing: antialiased;
+}
+
+.top-banner {
+    width: 100%;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+}
+
+.login-wrapper {
+    width: 460px;
+    margin: 60px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.main-logo {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.tab-menu {
+    display: flex;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 35px;
+}
+
+.tab-menu a {
+    flex: 0.5;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #999999;
+    font-size: 16px;
+}
+
+.tab-menu a:hover {
+    color: #111111;
+    cursor: pointer;
+}
+
+.tab-menu a.active {
+    color: #111111;
+    font-weight: bold;
+    border-bottom: 3px solid #111111;
+    margin-bottom: -1px;
+}
+.guide-text {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 25px;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    flex: 1;
+    height: 54px;
+    border: 1px solid #e5e5e5;
+    padding: 0 15px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #111111;
+    position: relative;
+    z-index: 1;
+}
+
+.input-group input::placeholder {
+    color: #cccccc;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 60px;
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    font-size: 18px;
+    font-family: NEXON Gothic Bold;
+    transition: all .15s linear;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.btn-submit:active {
+    opacity: 0.9;
+    transform: scale(0.99);
+}
+
+.btn-submit:hover {
+    background-color: #333333;
+    
+}
+
+.info-guide {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 25px;
+}
+
+.guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.guide-header .title {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-more {
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+}
+
+.guide-list {
+    list-style: none;
+}
+
+.guide-list li {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 7px;
+    line-height: 1.6;
+}
+
+.footer {
+    margin-top: 200px;
+    text-align: center;
+    padding-bottom: 0%;
+    font-size: small;
+    color: #999999;
+    font-weight: bold;
+        }
